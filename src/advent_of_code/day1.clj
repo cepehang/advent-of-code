@@ -12,7 +12,10 @@
 
 (println (count-depth-increase input))
 
-(defn three-measurement-windows [depths]
-  (mapv + depths (next depths) (next (next depths))))
+(defn measure-with-windows [windows-size depths]
+  (->> depths
+       (iterate next)
+       (take windows-size)
+       (apply map +)))
 
-(println (count-depth-increase (three-measurement-windows input)))
+(println (count-depth-increase (measure-with-windows 3 input)))
