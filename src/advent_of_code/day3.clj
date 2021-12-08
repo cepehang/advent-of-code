@@ -58,38 +58,3 @@
      (Long/parseLong (co2-rating inputs) 2)));; => #'advent-of-code.day3/compute-life-rating
 
 (compute-life-rating inputs);; => 587895
-
-(def test-input ["00100"
-                 "11110"
-                 "10110"
-                 "10111"
-                 "10101"
-                 "01111"
-                 "00111"
-                 "11100"
-                 "10000"
-                 "11001"
-                 "00010"
-                 "01010"])
-
-((if true keep-less-frequent keep-less-frequent) 0 test-input)
-;; => ["00100"
-;;     "11110"
-;;     "10110"
-;;     "10111"
-;;     "10101"
-;;     "01111"
-;;     "00111"
-;;     "11100"
-;;     "10000"
-;;     "11001"
-;;     "00010"
-;;     "01010"]
-
-(nth test-input 0)
-
-(binary-gamma-string test-input);; => "10110"
-
-(nth (binary-gamma-string test-input) 0);; => \1
-(filter #(= (nth % 0) \1) test-input)
-;; => ("11110" "10110" "10111" "10101" "11100" "10000" "11001")
