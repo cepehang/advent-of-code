@@ -2,12 +2,12 @@
   (:require [clojure.java.io :as io])
   (:require [clojure.string :as str]))
 
-(def input
+(def inputs
   (with-open [r (io/reader "resources/day2.input")]
     (doall (line-seq r))))
 
-(defn compute-first-product [input]
-  (->> input
+(defn compute-first-product [inputs]
+  (->> inputs
        (map #(str/split % #" "))
        (map (fn [[action n]]
                [(keyword action) (Float/parseFloat n)]))
@@ -19,10 +19,10 @@
                [0 0])
        (apply *)))
 
-(compute-first-product input)
+(compute-first-product inputs)
 
-(defn compute-second-product [input]
-  (->> input
+(defn compute-second-product [inputs]
+  (->> inputs
        (map #(str/split % #" "))
        (map (fn [[action n]]
                [(keyword action) (Float/parseFloat n)]))
@@ -37,4 +37,4 @@
 
 
 
-(compute-second-product input)
+(compute-second-product inputs)
