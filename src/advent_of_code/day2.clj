@@ -10,7 +10,7 @@
   (->> inputs
        (map #(str/split % #" "))
        (map (fn [[action n]]
-               [(keyword action) (Float/parseFloat n)]))
+              [(keyword action) (Float/parseFloat n)]))
        (reduce (fn [[x y] [action n]]
                  (case action
                    :forward [(+ x n) y]
@@ -25,7 +25,7 @@
   (->> inputs
        (map #(str/split % #" "))
        (map (fn [[action n]]
-               [(keyword action) (Float/parseFloat n)]))
+              [(keyword action) (Float/parseFloat n)]))
        (reduce (fn [[x y aim] [action n]]
                  (case action
                    :forward [(+ x n) (+ y (* aim n)) aim]
@@ -34,7 +34,5 @@
                [0 0 0])
        (take 2)
        (apply *)))
-
-
 
 (compute-second-product inputs)

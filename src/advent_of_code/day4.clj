@@ -13,9 +13,9 @@
 
 (defn parse-boards [boards-string]
   (->> boards-string
-     (filter #(not (str/blank? %)))
-     (mapv parse-board-line)
-     (partition 5)))
+       (filter #(not (str/blank? %)))
+       (mapv parse-board-line)
+       (partition 5)))
 
 (def inputs
   (with-open [r (io/reader "resources/day4.input")]
