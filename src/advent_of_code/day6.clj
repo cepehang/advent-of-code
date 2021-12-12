@@ -4,7 +4,7 @@
 
 (def input
   (with-open [r (io/reader "resources/day6.input")]
-    (let [[initial-states] (first (line-seq r))]
+    (let [initial-states (first (line-seq r))]
          (->> (str/split initial-states #",")
               (mapv #(Long/parseLong %))
               frequencies))))
