@@ -10,7 +10,7 @@
        (filter neg?)
        count))
 
-(println (count-depth-increase inputs))
+(comment (count-depth-increase inputs))
 
 (defn measure-with-windows [windows-size depths]
   (->> depths
@@ -18,4 +18,4 @@
        (take windows-size)
        (apply map +)))
 
-(println (count-depth-increase (measure-with-windows 3 inputs)))
+(comment (count-depth-increase (measure-with-windows 3 inputs)))
