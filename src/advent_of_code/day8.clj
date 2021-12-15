@@ -138,7 +138,7 @@
                             (vals unique-digits)))))
        count))
 
-(count-1478 inputs);; => 504
+;; (count-1478 inputs);; => 504
 
 (defn count=? [size coll]
   (= size (count coll)))
@@ -216,7 +216,7 @@
        (map decode-input-output)
        (apply +)))
 
-(decode-inputs inputs);; => 1073431
+;; (decode-inputs inputs);; => 1073431
 
 (def test-inputs
   (mapv parse-input ["be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe"
@@ -230,5 +230,5 @@
                      "egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb"
                      "gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce"]))
 
-(count-1478 test-inputs);; => 26
-(decode-inputs test-inputs);; => 61229
+;; (count-1478 test-inputs);; => 26
+;; (decode-inputs test-inputs);; => 61229

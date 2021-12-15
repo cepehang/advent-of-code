@@ -57,8 +57,8 @@
   (with-open [r (io/reader "resources/day10.input")]
     (doall (line-seq r))))
 
-(compute-syntax-points inputs);; => 366027
-(compute-autocorrect-points inputs);; => 1118645287
+;; (compute-syntax-points inputs);; => 366027
+;; (compute-autocorrect-points inputs);; => 1118645287
 
 (def test-inputs ["[({(<(())[]>[[{[]{<()<>>"
                   "[(()[<>])]({[<{<<[]>>("
@@ -71,5 +71,5 @@
                   "<{([([[(<>()){}]>(<<{{"
                   "<{([{{}}[<[[[<>{}]]]>[]]"])
 
-(compute-syntax-points test-inputs);; => 26397
-(compute-autocorrect-points test-inputs);; => 288957
+;; (compute-syntax-points test-inputs);; => 26397
+;; (compute-autocorrect-points test-inputs);; => 288957

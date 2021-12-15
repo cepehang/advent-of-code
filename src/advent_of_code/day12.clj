@@ -29,8 +29,6 @@
        (some #(> (second %) 1))
        some?))
 
-(some #(and false %) [0 1])
-
 (defn get-all-paths [node current-path adjacent-nodes]
   (cond
     (= node "end") (vector (conj current-path node))
@@ -42,11 +40,12 @@
             (filter #(not= "start" %)
                     (get-neighbors node adjacent-nodes)))))
 
-(->> test-input
-     (get-all-paths "start" [])
-     count);; => 10
+;; (->> test-input
+;;      (get-all-paths "start" [])
+;;      count) => 10
 ;; => 36
-(->> input
-     (get-all-paths "start" [])
-     count);; => 3497
+;; (->> input
+;;      (get-all-paths "start" [])
+;;      count)
+;; => 3497
 ;; => 93686

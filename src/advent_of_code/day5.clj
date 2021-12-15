@@ -36,8 +36,8 @@
        (filter #(>= (second %) 2))
        count))
 
-(count-vents-overlap inputs :disable-diagonal true);; => 7473
-(count-vents-overlap inputs);; => 24164
+;; (count-vents-overlap inputs :disable-diagonal true);; => 7473
+;; (count-vents-overlap inputs);; => 24164
 
 (def test-vents (mapv parse-vector ["0,9 -> 5,9"
                                     "8,0 -> 0,8"
@@ -50,5 +50,5 @@
                                     "0,0 -> 8,8"
                                     "5,5 -> 8,2"]))
 
-(count-vents-overlap test-vents :disable-diagonal true);; => 5
-(count-vents-overlap test-vents);; => 12
+;; (count-vents-overlap test-vents :disable-diagonal true);; => 5
+;; (count-vents-overlap test-vents);; => 12

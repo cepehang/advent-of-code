@@ -55,7 +55,7 @@
         (* (sum-board-remaining-numbers winning-board) current-move)
         (recur next-moves current-boards)))))
 
-(compute-winner-board-product inputs)
+;; (compute-winner-board-product inputs)
 
 (defn compute-loser-board-product [{:keys [moves boards]}]
   (loop [moves moves boards boards]
@@ -67,4 +67,4 @@
         (* (sum-board-remaining-numbers current-board) current-move)
         (recur next-moves (filter (comp not bingo?) current-boards))))))
 
-(compute-loser-board-product inputs)
+;; (compute-loser-board-product inputs)

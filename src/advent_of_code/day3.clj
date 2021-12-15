@@ -30,7 +30,7 @@
     (* (Long/parseLong gamma-string 2)
        (Long/parseLong epsilon-string 2))))
 
-(compute-power-consumption inputs)
+;; (compute-power-consumption inputs)
 
 (defn keep-most-frequent [index inputs]
   (let [gamma-string (binary-gamma-string inputs)
@@ -57,4 +57,4 @@
   (* (Long/parseLong (oxygen-rating inputs) 2)
      (Long/parseLong (co2-rating inputs) 2)));; => #'advent-of-code.day3/compute-life-rating
 
-(compute-life-rating inputs);; => 587895
+;; (compute-life-rating inputs);; => 587895

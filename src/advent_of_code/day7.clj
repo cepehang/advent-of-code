@@ -6,10 +6,6 @@
   (with-open [r (io/reader "resources/day7.input")]
     (mapv #(Long/parseLong %) (str/split (first (line-seq r)) #","))))
 
-(apply max inputs);; => 1763
-(apply min inputs);; => 0
-(count inputs);; => 1000
-
 (defn mean [longs]
   (/ (apply + longs)
      (count longs)))
@@ -42,13 +38,13 @@
     (min (sum-growing-distance positions floored-average)
          (sum-growing-distance positions ceiled-average))))
 
-(compute-needed-fuel inputs);; => 325528
-(compute-needed-more-fuel inputs);; => 85015836
+;; (compute-needed-fuel inputs);; => 325528
+;; (compute-needed-more-fuel inputs);; => 85015836
 
 (def test-inputs
   (mapv #(Long/parseLong %) (str/split "16,1,2,0,4,2,7,1,2,14" #",")))
 
-(mean test-inputs);; => 5
-(median test-inputs);; => 2
-(compute-needed-fuel test-inputs);; => 37
-(compute-needed-more-fuel test-inputs);; => 168
+;; (mean test-inputs);; => 5
+;; (median test-inputs);; => 2
+;; (compute-needed-fuel test-inputs);; => 37
+;; (compute-needed-more-fuel test-inputs);; => 168

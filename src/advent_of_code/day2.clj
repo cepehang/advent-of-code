@@ -19,7 +19,7 @@
                [0 0])
        (apply *)))
 
-(compute-first-product inputs)
+;; (compute-first-product inputs)
 
 (defn compute-second-product [inputs]
   (->> inputs
@@ -35,4 +35,4 @@
        (take 2)
        (apply *)))
 
-(compute-second-product inputs)
+;; (compute-second-product inputs)

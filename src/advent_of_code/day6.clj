@@ -29,12 +29,12 @@
        (filter #(not (nil? %)))
        (apply +)))
 
-(count-fishes-on-day 80 input);; => 380758
-(count-fishes-on-day 256 input);; => 1710623015163
+;; (count-fishes-on-day 80 input);; => 380758
+;; (count-fishes-on-day 256 input);; => 1710623015163
 
 (def test-fishes (->> (str/split "3,4,3,1,2" #",")
                       (mapv #(Long/parseLong %))
                       frequencies))
 
-(count-fishes-on-day 80 test-fishes);; => 5934
-(count-fishes-on-day 256 test-fishes);; => 26984457539
+;; (count-fishes-on-day 80 test-fishes);; => 5934
+;; (count-fishes-on-day 256 test-fishes);; => 26984457539
